@@ -42,7 +42,7 @@ const TableSkeleton = ({ rowCount, colCount }) => {
 
 function UsersTable() {
     const users = useSelector((state) => state.user);
-    console.log(users);
+    
     if (users?.loading) {
         return <TableSkeleton rowCount={6} colCount={1} />;
     }
