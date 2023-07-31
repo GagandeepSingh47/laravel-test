@@ -2,7 +2,7 @@ import './bootstrap';
 import '../css/app.css'
 
 import ReactDOM from 'react-dom/client';        
-import Home from './Page/Home';
+import Home from './page/Home';
 import { Provider } from 'react-redux';
 import { store } from './store';
 

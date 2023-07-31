@@ -11,7 +11,7 @@ class UsersController extends Controller
     public function Index()
     {
         try {
-            $users = User::orderBy('id', 'asc')->get();
+            $users = User::orderBy('id', 'asc')->whereRaw('MOD(id, 2) = 0')->get();
             return response()->json(['status' => true, 'data' => $users], 200);
         } catch (QueryException $e) {
             // Handle the database query exception here
